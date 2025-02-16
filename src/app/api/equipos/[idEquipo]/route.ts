@@ -4,7 +4,7 @@ import { apiFetch } from "@/app/utils/apiFetch";
 
 export async function GET(
   req: NextRequest,
-  { params }: { params: { idEquipo: string } }
+  { params }: { params: { idEquipo: string | string[] } }
 ) {
   // Extraer el token de la sesión usando el helper de NextAuth
   const token = await getToken({ req });
