@@ -65,7 +65,7 @@ export async function PUT(req: NextRequest) {
   // Intentar parsear la respuesta como JSON
   try {
     return NextResponse.json("Modificando...");
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { error: "La respuesta del backend no es un JSON válido" },
       { status: 500 }
