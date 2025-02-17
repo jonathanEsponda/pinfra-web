@@ -7,8 +7,6 @@ export async function middleware(req: NextRequest) {
   const session = await getToken({ req, secret: process.env.AUTH_SECRET });
   const { pathname } = req.nextUrl;
 
-  console.log("session: ", session);
-
   const publicPaths = ["/login", "/registro", "/"];
 
   // Si la ruta es pública, continúa sin validar
